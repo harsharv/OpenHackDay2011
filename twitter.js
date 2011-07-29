@@ -17,7 +17,6 @@ TwitterFeed.prototype.fetchData = function (tag, count) {
     }
 
     urlPath = "/search.json?q=" + escape(tag) + "&result_type=mixed&count=" + count;
-    console.log(urlPath);
 
     http.get({"host": "search.twitter.com", "port" : 80,
               "path": urlPath}, function(res) {

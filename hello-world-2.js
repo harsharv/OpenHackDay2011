@@ -8,7 +8,7 @@ setInterval(function ()
 
 /* On INT signal, say bye and exit. */
 process.on('SIGINT', function () {
-    console.log('Bye!');
+    console.log("\nBye! \n");
     process.exit(0);
 });
 

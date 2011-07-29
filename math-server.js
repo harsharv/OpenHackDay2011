@@ -43,6 +43,8 @@ http.createServer(function (req, res) {
             case '/pow'   : res.writeHead(200, 'text/plain');
                             res.end(operation.pow(parseInt(query.a, 10), parseInt(query.b, 10)) + "");
                             break;
+            default       : res.writeHead(400, 'text/plain');
+                            res.end('Invalid operation: ' + path);
         };
 
 }).listen(9000, "127.0.0.1");
